@@ -1,0 +1,127 @@
+% Exemple d'utilisation de la classe roadef pour le congrès ROADEF 2019 (http://roadef2019.univ-lehavre.fr)
+
+\documentclass{roadef}
+
+\begin{document}
+
+
+% Le titre du papier
+\title{ROADEF 2019, modèle de document \LaTeX{} pour un résumé de \textbf{2} pages maximum}
+
+% Le titre court
+\def\shorttitle{Titre court}
+
+% Les auteurs et leur numéro d'affiliation
+\author{Marc Sevaux\inst{1}, Maxime Chassaing\inst{1}, André Rossi\inst{2} }
+
+
+% Les affiliations (par ordre croissant des numéros d'affiliation) séparées par \and
+\institute{
+Universit\'{e} de Bretagne Sud, Lab-STICC, F-56321 Lorient, France \\
+\email{\{marc.sevaux,maxime.chassaing\}@univ-ubs.fr}
+\and
+Universit\'{e} d'Angers, LERIA, F-49045 Angers, France \\
+
+\email{andre.rossi@univ-angers.fr}
+}
+
+
+% Création de la page de titre
+\maketitle
+\thispagestyle{empty}
+
+% Les mots-clés
+\keywords{recherche opérationnelle, optimisation.}
+
+
+\section{Introduction}
+
+Ceci est un modèle de document  \LaTeX{} pour un résumé de deux pages maximum dans le cadre du vingtième congrès de la ROADEF qui se déroulera au \textit{Havre les 19, 20 et 21 février 2019}. La limite de deux pages (bibliographie incluse) ne s'applique pas aux soumissions déposées dans la cadre du Prix Jeune Chercheur, pour lesquelles la taille est fixée à quatre pages. Les paragraphes de texte courant seront de style RoadefTexte. Les marges sont de 2,5 cm partout, avec une reliure à gauche de 0,5 cm.
+
+
+\section{Système de référence}
+
+\subsection{Renvoi à une illustration, tableau ou formule}
+
+Un renvoi à une illustration (figure, graphique...), à un tableau ou à une formule pourra se faire de deux façons différentes : i) la Figure (\ref{logoRoadef}) représente le logo de la ROADEF ou ii) le logo de la ROADEF (voir Figure~\ref{logoRoadef}) est très simple.\footnote{Exemple de pied de page}
+
+\subsection{Renvoi bibliographique}
+
+Les renvois bibliographiques devront être mis entre crochets. Pour des renvois bibliographiques multiples, citer les articles dans l'ordre dans lequel ils apparaissent dans la liste de références (par exemple \cite{toth02,kirkpatrick83}). La liste de références devra être triée dans l'ordre alphabétique du nom de famille du premier auteur. Voici quelques exemples de références : un livre  \cite{toth02}, un article  \cite{kirkpatrick83}.
+
+\subsection{Illustration, formule et légende}
+
+La légende des illustrations devra être positionnée en dessous de l'illustration, comme dans la Figure (\ref{logoRoadef}). Les équations devront être centrées et numérotées avec des chiffres arabes (par exemple Equation \ref{emc}).
+
+\begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[height=2cm,clip=true]{roadef_logo.eps}
+        \caption[Fig]{Logo de la ROADEF}
+        \label{logoRoadef}
+    \end{center}
+\end{figure}
+
+\begin{equation}
+E=MC^2\label{emc}
+\end{equation}
+
+\begin{theoreme}
+  Un exemple de théorème. Les environnements suivants sont également disponibles : remarque, propriété, corollaire, définition, notation, proposition, exemple, preuve.
+\end{theoreme}
+
+\subsection{Tableau}
+
+Le titre du tableau devra être positionné sous le tableau (par exemple Tableau \ref{tableau}).
+
+\begin{table}[!ht]
+    \begin{center}
+        \begin{tabular}{lrr}
+            \hline
+            & \multicolumn{1}{c}{Colonne 1} & \multicolumn{1}{c}{Colonne 2}\\
+            \hline
+            Ligne 1 & L1C1 & L1C2\\
+            Ligne 2 & L2C1 & L2C2\\
+            \hline
+        \end{tabular}
+        \caption{Exemple de tableau}
+    \label{tableau}
+    \end{center}
+\end{table}
+
+\subsection{Liste}
+
+Voici une liste :
+
+\begin{itemize}
+\item remarque
+\item propriété
+\end{itemize}
+
+\section{Conclusions et perspectives}
+
+Bon courage pour la rédaction !
+
+
+% La bibliographie
+
+\bibliographystyle{plain}
+
+% Version "on-line" de la bibliographie, mais il est
+% également possible d'utiliser un fichier ".bib" et d'utiliser BibTeX
+
+
+\begin{thebibliography}{2}
+\bibitem{toth02}
+Paolo Toth and Daniele Vigo.
+\newblock \emph{The Vehicle Routing Problem}.
+\newblock Monographs on Discrete Mathematics and Applications. Society for Industrial and Applied Mathematics, 2002.
+\bibitem{kirkpatrick83}
+Scott Kirkpatrick, C~Daniel Gelatt, and Mario~P Vecchi.
+\newblock Optimization by simmulated annealing.
+\newblock \emph{science}, 220\penalty0 (4598):\penalty0 671--680, 1983.
+
+
+\end{thebibliography}
+
+
+\end{document}
